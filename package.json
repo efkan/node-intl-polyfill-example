@@ -1,9 +1,21 @@
 {
-  "name": "i18n-testing-in-nodejs",
+  "name": "node-intl-polyfill-example",
   "version": "0.0.1",
-  "private": true,
-  "description": "This is a part of Markalarim App and used by member brands.",
+  "private": false,
+  "description": "An Intl polyfill example and boilerplate for Node.js",
   "main": "app.js",
+  "keywords": [
+    "i18n",
+    "i18n boilerplate",
+    "intl",
+    "intl boilerplate",
+    "internationalization",
+    "messageFormat",
+    "relativeFormat",
+    "i18n polyfill",
+    "intl polyfill",
+    "node-intl"
+  ],
   "dependencies": {
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
@@ -21,5 +33,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Efkan Türen",
-  "license": "© 2015, Inc. All rights reserved."
+  "license": ""
 }
