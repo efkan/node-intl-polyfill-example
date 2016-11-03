@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <b>Original data:</b>
+    <br>
+    <%- number %>
+    <br>
+    <%- date %>
+    <br>
+    <br>
+    <b>Localized data in accordance with English:</b>
+    <br>
+    <i>Intl.NumberFormat</i> => <%- new Intl.NumberFormat('en').format(number) %>
+    <br>
+    <i>Intl.DateTimeFormat</i> => <%- new Intl.DateTimeFormat('en').format(date) %>
+    <br>
+    <i>Intl.RelativeFormat</i> 1, <%- messageEn %> <%- new Intl.RelativeFormat('en-US').format(date) %>
+    <br>
+    <i>Intl.RelativeFormat</i> 2, <%- Intl.Translations.views.demo['en-US'].fiveHSAgoMessage %>  <%- new Intl.RelativeFormat('en-US').format(fiveHundredSecondsAgo) %>
+    <br>
+    <small> "<%- Intl.Translations.views.demo['en-US'].hello_world %>" below is being written by using Intl.Translations in JS Template file directly! (EJS, Handlebars, Mustache etc.)</small>
+    <br>
+    <%- Intl.Translations.views.demo['en-US'].hello_world %>
+    <br>
+    <i>Intl.MessageFormat</i> => <%- new Intl.MessageFormat(Intl.Translations.views.demo['en-US'].num_photos, 'en-US').format({numPhotos: 1000}) %>
+    <br>
+    <br>
+    <b>Localized data in accordance with Turkish:</b>
+    <br>
+    <i>Intl.NumberFormat</i> => <%- new Intl.NumberFormat('tr-TR').format(number) %>
+    <br>
+    <i>Intl.DateTimeFormat</i> => <%- new Intl.DateTimeFormat('tr-TR').format(date) %>
+    <br>
+    <i>Intl.Relative Format</i> 1, <%- messageTr %> <%- new Intl.RelativeFormat('tr-TR').format(date) %>
+    <br>
+    <i>Intl.Relative Format</i> 2, <%- Intl.Translations.views.demo['tr-TR'].fiveHSAgoMessage %> <%- new Intl.RelativeFormat('tr-TR').format(fiveHundredSecondsAgo) %>
+    <br>
+    <small> "<%- Intl.Translations.views.demo['tr-TR'].hello_world %>" below is being written by using Intl.Translations in JS Template file directly! (EJS, Handlebars, Mustache etc.)</small>
+    <br>
+    <%- Intl.Translations.views.demo['tr-TR'].hello_world %>
+    <br>
+    <i>Intl.MessageFormat</i> => <%- new Intl.MessageFormat(Intl.Translations.views.demo['tr-TR'].num_photos, 'tr-TR').format({numPhotos: 1000}) %>
+    <br>
+    <br>
+    <b>Localized data in accordance with Your Locale :</b>
+    <br>
+    <i>Intl.NumberFormat</i> => <%- new Intl.NumberFormat(locale).format(number) %>
+    <br>
+    <i>Intl.DateTimeFormat</i> => <%- new Intl.DateTimeFormat(locale).format(date) %>
+    <br>
+    <i>Intl.RelativeFormat</i> 1, <%- message %> => <%- new Intl.RelativeFormat(locale).format(date) %>
+    <br>
+    <i>Intl.RelativeFormat</i> 2, <%- Intl.Translations.views.demo['tr-TR'].fiveHSAgoMessage %> <%- new Intl.RelativeFormat('tr-TR').format(fiveHundredSecondsAgo) %>
+    <br>
+    <small>"<%- Intl.Translations.views.demo[locale].hello_world %>" below is being written by using Intl.Translations in JS Template file directly! (EJS, Handlebars, Mustache etc.)</small>
+    <br>
+    Wrap the line below with EJS tags after you set your language (1. global.appLocales array on app.js - 2. /intl-polyfill/app/views/demo.js - 3. /routes/appDemo) <br>
+    Intl.Translations.views.demo[locale].hello_world
+    <br>
+    Wrap the line below with EJS tags after you set your language (1. global.appLocales array on app.js - 2. /intl-polyfill/app/views/demo.js - 3. /routes/appDemo) <br>
+    <i>Intl.MessageFormat</i>, => new Intl.MessageFormat(Intl.Translations.views.demo[locale].num_photos, locale).format({numPhotos: 1000})
+    <br>
+    <br>
+    <br>
+    <b>Note:</b> <br>
+    This is direct access to Translation from the tamplate => Intl.Translations.views.demo[locale].hello_world <br>
+    Also this is direct access to Translation from the tamplate too => new Intl.MessageFormat(Intl.Translations.views.demo[locale].num_photos, locale).format({numPhotos: 1000}) <br>
+    <br>
+    <br>
+    Some translations are found in /intl-pollyfill/app/views folder. This is a logical decision becuse I use them in (/views) template file directly.
+    <br>
+    Some translations are found in /intl-pollyfill/app/routes folder. Becuse I use them in /routes file.
+  </body>
+</html>
