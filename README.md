@@ -34,6 +34,6 @@ All of these bring the following beautiful functions with an object to the `Intl
 ![launch](https://raw.githubusercontent.com/efkan/node-intl-polyfill-example/master/3000.png)
 
 
-### static.js example screenshot
+### static.js example screenshot (simple translation)
 
 ![launch](https://raw.githubusercontent.com/efkan/node-intl-polyfill-example/master/4000.png)
