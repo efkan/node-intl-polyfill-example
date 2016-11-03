@@ -11,7 +11,7 @@ This example shows how to apply polyfills to beautiful [Intl](https://github.com
 
 Intl package of [andyearnshaw](https://github.com/andyearnshaw) provides Javascript Intl object to Node.js (except collators).
 
-Example contains two Node.js applications which are named as `app.js` and `static.js`.
+Example contains two Node.js applications, `app.js` for to show complex example and `static.js` for to show a simple translation.
 
 The apps use three Yahoo Intl packages:
 * [intl-locales-supported](https://github.com/yahoo/intl-locales-supported)
