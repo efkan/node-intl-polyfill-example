@@ -2,7 +2,10 @@
 
 ## Setup
 
-If Node.js has been installed on your OS, just download this repository, open a console in the downloaded folder and run the command of `node app`. Then open your browser and visit _http://localhost:3000_.
+If Node.js has been installed on your OS, just download this repository, open a console in the downloaded folder and run the command of 
+`npm install` to install related node modules.
+
+Then run the command of `node app`, open your browser and visit _http://localhost:3000_.
 
 To run `static` example open another console and run the command of `node static`. Then open your browser and visit _http://localhost:4000_.
 
