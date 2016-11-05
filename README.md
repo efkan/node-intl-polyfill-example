@@ -1,4 +1,4 @@
-# INTL POLYFILL and INTL IMPLEMENTATION     (Internationalization API) on NODE.JS
+# INTL POLYFILL and IMPLEMENTATION     (Internationalization API) on NODE.JS
  
   In Node.js [Intl](https://github.com/nodejs/node/wiki/Intl) support is not enabled by default yet.
   Also Intl ICU files should be prepared and added in different ways according to the OS platform.
