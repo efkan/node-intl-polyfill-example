@@ -67,6 +67,12 @@ static.use(session({
   cookie: { secure: true }
 }))
 
+// ADDING LOCALE INFO TO THE REQUEST OBJECT
+app.use(function (req,res,next) {
+  // Choosing 'en-US' as default
+  req.locale = req.acceptsLanguages(appLocales) || 'en-US'
+  next()
+})
 
 // ADDING ROUTES
 static.use(require('./routes/staticDemo'))
